@@ -1,0 +1,75 @@
+.header{
+        
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 400;
+        background-color: $color-blue;
+        height: 4rem;
+       
+       
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+
+    }
+
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10rem;
+        height: 100%;
+
+        &-button{
+            height: 4rem;
+            width: 4rem;                
+            
+            position: relative;
+            
+            
+
+            // & svg {
+            //     height: 3rem;
+            //     width: 3rem;
+            //     position: absolute;
+            //     top: 1.5rem;
+            //     right: 1.5rem;
+                
+            // }
+
+        }
+        
+
+
+        &-button-box{
+            display: flex;
+            justify-content: center;
+
+            
+                  
+           
+            
+
+            
+        }
+
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+}
