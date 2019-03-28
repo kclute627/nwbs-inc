@@ -1,75 +1,197 @@
-.header{
+a:-webkit-any-link{
+    color: inherit;
+}
+a:active,
+a:link{
+   
+        border: none;
+        outline: none;     
+        text-decoration: none;
         
-        font-size: 1.5rem;
+}
+
+.dropdown{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: all .5s ease;
+    margin-top: 1.8rem;
+    left: 0;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.3);
+    display: none;
+
+    &-item{
+    padding: 1rem 2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: $color-blue;
+    background-color: #e3e3e3 ;
+    
+    text-decoration: none;
+    border-bottom: .5px solid #c2c2c2; 
+    
+
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.3);
+    width: 100%;
+
+    &:hover{
+        color: black;
+        background-color: #afafaf;
+    }
+
+    
+    }
+
+    
+
+}
+
+
+.header{        
+        font-size: 2rem;
         color: #fff;
         font-weight: 400;
         background-color: $color-blue;
         height: 4rem;
-       
-       
+
     &__icon{
         height: 2rem;
         width: 2rem;
         position: absolute;
-        top: .8rem;
-        right: .8rem;
+        top: 1rem;
+        right: 1.1rem;
 
     }
-
-
     &__top{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 10rem;
+        margin: 0 18rem;
         height: 100%;
 
         &-button{
-            height: 4rem;
-            width: 4rem;                
-            
-            position: relative;
-            
-            
 
-            // & svg {
-            //     height: 3rem;
-            //     width: 3rem;
-            //     position: absolute;
-            //     top: 1.5rem;
-            //     right: 1.5rem;
+            &-link{
                 
-            // }
 
+            }
+
+            &-link:active,
+            &-link:focus{
+                border: none;
+                outline: none;
+
+                
+            }
+
+            &-box{
+                display: flex;
+                justify-content: center;
+            }
         }
         
 
-
-        &-button-box{
-            display: flex;
-            justify-content: center;
-
-            
-                  
+        &-button-1{
+            @include header-btn;    
+                   
+            background-image: linear-gradient($color-gray-light-1, $color-gray-light-1 50%,#0077B5 50%,  rgb(4, 152, 231));
            
-            
-
+            &:hover{
+                background-position: 0 100%;
+                fill: #fff;
+            }
             
         }
+            &-button-2{
+                @include header-btn;  
+                             
+                background-image: linear-gradient($color-gray-light-1, $color-gray-light-1 50%,#3C5A99 50%, rgb(82, 121, 206));
+                
+                &:hover{
+                    background-position: 0 100%;
+                    fill: #fff;
+    
+                }
+            }
+                &-button-3{
+                   @include header-btn; 
+                   background-image: linear-gradient($color-gray-light-1, $color-gray-light-1 50%,#db3236 50%, #f06264);
+                               
+                    &:hover{
+                        background-position: 0 100%;
+                        fill: #fff;
+        
+                    }
 
+        }
+        
     }
 
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        padding: 1.5rem 18rem;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+       
+        &-nav{
 
-    
+            &-link{
+                text-decoration: none;
+                color: #fff;
+            }
+            
 
+            &-item{
+                
+                align-items: center;
+                justify-content: center;
+                padding: 1.8rem 1.9rem;               
+                background-image: linear-gradient(to right, $color-blue, $color-blue-dark);
+                color: white;
+                font-size: 1.5rem;
 
+                &:not(:last-child){
+                border-right: 1px solid #fff;
+                }
+                
 
-
-
-
-
-
+            }
+            
+            &-1{
+                display: flex;
+                text-decoration: none;
+                list-style-type: none;
+                
+                
+            }
+        }
+    }
 
 
 
 }
+.dropdown-item,
+.header__bottom-nav-item{
+
+    display: block;
+    transition-duration: .5s;;
+    position: relative;
+    float: left;
+
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+.header__bottom-nav-item:hover > ul,
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+
+}
+
+

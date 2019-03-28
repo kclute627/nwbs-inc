@@ -15,18 +15,35 @@ class Header extends Component {
                     <div className="header__top">
                         <p className="header__top-text">Employee, Tenant &amp; Volunteer Background Checks</p>
                         <div className="header__top-button-box">
-                             <button className="header__top-button">
-                                <Link
-                                className="header__icon "/> 
-                             </button>
-                             <button className="header__top-button">
-                                <Fb
-                                className="header__icon "/> 
-                             </button>
-                             <button className="header__top-button">
-                                <Google
-                                className="header__icon "/> 
-                             </button>
+                             <a 
+                             className ="header__top-button-link"
+                             href = "https://www.linkedin.com"
+                             target = "blank">
+                                <button
+                                className="header__top-button-1">
+                                    <Link
+                                    className="header__icon "/> 
+                                </button>
+                             </a>
+                             <a
+                             className ="header__top-button-link" 
+                             href = "https://www.facebook.com"
+                             target = "blank">
+                                <button className="header__top-button-2">
+                                    <Fb
+                                    className="header__icon "/> 
+                                </button>
+                             </a>
+                             <a
+                             className ="header__top-button-link"
+                             href = "https://www.google.com"
+                             target = "blank" >
+                                <button className="header__top-button-3">
+                                    <Google
+                                    className="header__icon"/>                                
+                                </button>
+                             </a>
+                             
                                                                                  
                                   
                         </div>

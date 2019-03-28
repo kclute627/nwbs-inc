@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../Components/Header/Header'
+import Header from '../Components/Header/Header';
+import HomeHeader from '../Components/Header/HomeHeader';
 
 
 
@@ -12,7 +13,12 @@ class App extends Component {
 
 
         return(
-            <Header/>
+            <div>
+                <Header/>
+                <HomeHeader/>
+
+            </div>
+            
         )
     }
 }
